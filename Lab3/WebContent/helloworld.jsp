@@ -8,7 +8,7 @@
 <body>
 	<h2>Hello World</h2>
 	<%
-		for (int i = 1; i < 11; i++) {
+		for (int i = 1; i <= 10; i++) {
 			out.print("<h2>");
 			out.print(Integer.toString(i));
 			out.println("</h2>");
