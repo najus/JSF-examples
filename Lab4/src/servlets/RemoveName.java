@@ -13,6 +13,11 @@ import javax.servlet.http.HttpSession;
 
 import model.Person;
 
+/**
+ * 
+ * @author najus
+ *
+ */
 @WebServlet(name = "removeName", urlPatterns = { "/removeName" })
 public class RemoveName extends HttpServlet {
 

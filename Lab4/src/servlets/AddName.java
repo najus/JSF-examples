@@ -12,6 +12,11 @@ import model.Person;
 import java.util.HashMap;
 import javax.servlet.RequestDispatcher;
 
+/**
+ * 
+ * @author najus
+ *
+ */
 @WebServlet(name = "addName", urlPatterns = { "/addName" })
 public class AddName extends HttpServlet {
 

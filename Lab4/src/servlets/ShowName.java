@@ -13,6 +13,11 @@ import javax.servlet.http.HttpSession;
 
 import model.Person;
 
+/**
+ * 
+ * @author najus
+ *
+ */
 @WebServlet(name = "showName", urlPatterns = { "/showName" })
 public class ShowName extends HttpServlet {
 
