@@ -12,16 +12,15 @@ import model.Person;
 import java.util.HashMap;
 import javax.servlet.RequestDispatcher;
 
-@WebServlet(name = "addnameservlet", urlPatterns = { "/addnameservlet" })
-public class addnameservlet extends HttpServlet {
+@WebServlet(name = "addName", urlPatterns = { "/addName" })
+public class AddName extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// processRequest(request, response);
 		String key = request.getParameter("key").toString();
-		String firstName = request.getParameter("firstname").toString();
-		String lastName = request.getParameter("lastname").toString();
+		String firstName = request.getParameter("firstName").toString();
+		String lastName = request.getParameter("lastName").toString();
 
 		if (key != null && firstName != null && lastName != null) {
 
@@ -37,7 +36,7 @@ public class addnameservlet extends HttpServlet {
 			request.setAttribute("list", list);
 		}
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("shownames.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("showallnames.jsp");
 		dispatcher.forward(request, response);
 	}
 

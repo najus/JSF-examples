@@ -13,16 +13,12 @@ import javax.servlet.http.HttpSession;
 
 import model.Person;
 
-@WebServlet(name = "removenameservlet", urlPatterns = { "/removenameservlet" })
-public class removenameservlet extends HttpServlet {
-
-	// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on
-	// the + sign on the left to edit the code.">
+@WebServlet(name = "removeName", urlPatterns = { "/removeName" })
+public class RemoveName extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// processRequest(request, response);
 		String key = request.getParameter("key").toString();
 		if (key != null) {
 
@@ -31,7 +27,7 @@ public class removenameservlet extends HttpServlet {
 			list.remove(key);
 			request.setAttribute("list", list);
 		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher("shownames.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("showallnames.jsp");
 		dispatcher.forward(request, response);
 	}
 

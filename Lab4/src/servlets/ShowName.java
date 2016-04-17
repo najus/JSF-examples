@@ -13,11 +13,8 @@ import javax.servlet.http.HttpSession;
 
 import model.Person;
 
-@WebServlet(name = "shownameservlet", urlPatterns = { "/shownameservlet" })
-public class shownameservlet extends HttpServlet {
-
-	// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on
-	// the + sign on the left to edit the code.">
+@WebServlet(name = "showName", urlPatterns = { "/showName" })
+public class ShowName extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -28,8 +25,8 @@ public class shownameservlet extends HttpServlet {
 			list = new HashMap<String, Person>();
 		}
 		request.setAttribute("list", list);
-
-		RequestDispatcher dispatcher = request.getRequestDispatcher("shownames.jsp");
+		request.setAttribute("clicked", true);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("showallnames.jsp");
 		dispatcher.forward(request, response);
 	}
 
