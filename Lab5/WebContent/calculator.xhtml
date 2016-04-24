@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>JSP Page</title>
+</head>
+<body>
+	<h:form>
+               First Number: <h:inputText
+			value="#{CalculatorJSF.firstNumber}"></h:inputText>
+		<br></br> Second Number:
+		<h:inputText value="#{CalculatorJSF.secondNumber}"></h:inputText>
+		<br></br>
+		<br></br>
+		<h:commandButton value="Add" action="#{CalculatorJSF.add}"></h:commandButton>
+		<h:commandButton value="Subtract" action="#{CalculatorJSF.subtract}"></h:commandButton>
+		<h:commandButton value="Multiply" action="#{CalculatorJSF.multiply}"></h:commandButton>
+		<h:commandButton value="Divide" action="#{CalculatorJSF.divide}"></h:commandButton>
+		<br></br> Result: 
+		<h:outputText value="#{CalculatorJSF.result}"></h:outputText>
+	</h:form>
+</body>
+</html>
