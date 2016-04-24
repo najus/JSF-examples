@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+	<managed-bean>
+		<description>Hello Bean</description>
+		<managed-bean-name>HelloWorld</managed-bean-name>
+		<managed-bean-class>hello.Hello</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<description>Calculator Bean</description>
+		<managed-bean-name>CalculatorJSF</managed-bean-name>
+		<managed-bean-class>hello.Calculator</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+</faces-config>
