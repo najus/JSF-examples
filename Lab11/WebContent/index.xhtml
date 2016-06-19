@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Lab 10: Ajax</title>
+</h:head>
+<h:body>
+	<h:form>
+        Type Country:
+        <h:inputText value="#{countrybean.selection}">
+			<f:ajax event="keyup" render="countries"
+				listener="#{countrybean.update}" />
+		</h:inputText>
+
+		<br />
+		<h:selectManyListbox id="countries">
+			<f:selectItems value="#{countrybean.listboxitems}" />
+		</h:selectManyListbox>
+	</h:form>
+</h:body>
+</html>
+
